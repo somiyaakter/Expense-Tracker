@@ -39,16 +39,19 @@ export default function ExpenseTracker() {
 	}
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center p-6">
-			<div className="bg-white shadow-xl rounded-2xl w-full max-w-4xl p-8">
+		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center p-6 ">
+			<div className="bg-white shadow-xl rounded-2xl w-full max-w-4xl mx-auto p-8">
 				<h1 className="text-3xl italic font-bold text-center mb-4 text-orange-500">
 					Expense Tracker
 				</h1>
 
 				{/* Total Display */}
 				<div className="text-center mb-8">
-					<h2 className="text-2xl font-semibold text-gray-800">
-						Total: <span className="text-orange-500">${total.toFixed(2)}</span>
+					<h2 className="text-3xl font-bold text-gray-800">
+						Total:{' '}
+						<span className="text-orange-500 font-bold ">
+							৳ {total.toFixed(2)}
+						</span>
 					</h2>
 				</div>
 
@@ -94,10 +97,9 @@ export default function ExpenseTracker() {
 								</p>
 
 								<div className="flex items-center gap-4">
-									<p className="text-gray-700 font-semibold">
-										${expense.amount.toFixed(2)}
+									<p className="text-gray-700 font-semibold text-xl">
+										৳ {expense.amount.toFixed(2)}
 									</p>
-
 									<button
 										onClick={() => handleDelete(expense.id)}
 										className="bg-orange-500 text-white p-1 rounded-md hover:bg-orange-600 transition-all"
